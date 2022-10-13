@@ -38,12 +38,13 @@ def InputNumbers(inputText):
     return number
 num = InputNumbers("Введите число: ") 
 rand_list=[i for i in range(1,num+1)]
-print(rand_list)
+
 def mult(num):
     if num == 1:
         return 1
     else:
         return num * mult(num - 1)
        
-new_list = list(map(mult, rand_list))		
-print(new_list)
+new_list = list(map(mult, rand_list))
+# new_list = str(tuple(new_list))	меняет кваодратные скобки на круглые
+print(f"N = {num}, тогда произведения от 1 до N {new_list}")
